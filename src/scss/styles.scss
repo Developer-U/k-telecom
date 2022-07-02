@@ -1,0 +1,284 @@
+@import "_variables.scss";
+@import "_mixin.scss";
+@import "global.scss";
+@import "fonts.scss";
+@import "burger.scss";
+
+
+
+/*Header*/
+
+.header {
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: $white;
+
+  &__contain {
+    min-height: 77px;
+    padding: 20px 0 10px 0;
+
+@include flex-center-between();
+  }
+
+  &__logo {
+    width: 147px;
+  }
+
+  &__img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+.menu {
+  width: calc(100% - 490px);
+  &__list {
+    @include list-none();
+
+@include flex-center-between();
+  }
+
+  &__link {
+    font-size: 18px;
+    font-family: $regular;
+    line-height: 20px;
+    color: $black;
+    transition: color .3s ease-in;
+
+@include relative();
+
+    &::after {
+      display: block;
+      bottom: -3px;
+      left: 0;
+      width: 0;
+      height: 1.3px;
+      background-color: $magenta;
+      transition: width .3s ease-in;
+
+@include before();
+    }
+
+    &:hover , &:focus {
+      color: $magenta;
+      transition: color .3s ease-in;
+    }
+
+    &:hover::after , &:focus::after {
+      width: 100%;
+      transition: width .3s ease-in;
+    }
+  }
+}
+
+
+
+/*Hero*/
+
+.hero {
+  min-height: 100%;
+  background-color: $banner;
+
+  &__contain {
+    min-height: 450px;
+    padding: 164px 0 89px 0;
+    background: $banner url("../images/main_pic.png") no-repeat top 146px right 53px/436px auto;
+  }
+}
+
+.hero-box {
+  width: 55%;
+
+  &__heading {
+    margin-bottom: 14px;
+  }
+
+  &__list {
+    margin-bottom: 30px;
+    padding-left: 25px;
+  }
+
+  &__item {
+    font-size: 16px;
+    line-height: 32px;
+  }
+
+  &__btn {
+    width: 203px;
+    min-height: 45px;
+
+@include magentaBtn();
+  }
+}
+
+
+/*Plans*/
+
+.plans {
+  padding: 50px 0 0 0;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 349px;
+  min-height: 481px;
+  margin: 33px 0;
+  padding: 30px;
+  box-shadow: 0 12px 25px rgba(90,90,90,.20);
+  border-radius: 10px;
+
+
+  &__heading {
+    margin-bottom: 14px;
+  }
+
+  &__descr {
+    margin-bottom: 3px;
+    font-size: 14px;
+    line-height: 21px;
+    color: lighten($black, 60%);
+  }
+
+  &__speed {
+    margin-bottom: 5px;
+    font-size: 25px;
+    font-family: $medium;
+    line-height: 38px;
+    color: $magenta;
+  }
+
+  &__text {
+    margin-bottom: 25px;
+  }
+
+  &__price {
+    font-size: 40px;
+    font-family: $bold;
+    line-height: 60px;
+
+@include relative();
+
+    &::after {
+      content: "в месяц";
+      display: inline-block;
+      position: relative;
+      top: -7px;
+      right: -11px;
+      font-size: 16px;
+      font-weight: 100;
+      font-family: $opensans;
+      line-height: 24px;
+      color: lighten($black, 60%);
+    }
+  }
+
+  &__more {
+    margin-bottom: 24px;
+    font-size: 12px;
+    line-height: 18px;
+    color: lighten($black, 60%);
+  }
+
+  &__btn {
+    width: 46,8%;
+    min-height: 45px;
+
+@include magentaBtn();
+
+    &.changed {
+      border-color: $blue;
+      color: $white;
+      background-color: $blue;
+    }
+  }
+}
+
+
+/*Cta*/
+
+.cta {
+  padding-bottom: 40px;
+
+  &__contain {
+    width: 94%;
+    padding: 50px 50px 86px;
+    background-color: $banner;
+    border-radius: 20px;
+  }
+
+  &__heading {
+    margin-bottom: 20px;
+  }
+}
+
+
+/*Footer*/
+
+.footer {
+  height: 100%;
+  padding-bottom: 21px;
+
+  &__contain {
+    border-top: 1px solid $grey;
+    border-bottom: 1px solid $grey;
+  }
+
+  &__descr {
+    width: 94%;
+    min-height: 76px;
+
+@include flex-center-between();
+  }
+
+  &__left {
+    width: 48%;
+
+@include flex-center-between();
+  }
+
+  &__logo {
+    width: 147px;
+  }
+
+  &__copyright {
+    font-size: 14px;
+    line-height: 21px;
+    color: lighten($black, 60%);
+  }
+}
+
+.cta__form {
+  height: 142px;
+  background-color: grey;
+}
+
+.social {
+  width: 129px;
+  list-style-type: none;
+
+@include flex-center-between();
+
+  &__item {
+    width: 30px;
+    height: 30px;
+  }
+
+  &__icon {
+    width: 100%;
+    height: 100%;
+    transition: filter .25s ease-in-out;
+
+    &:hover , &:focus {
+      transition: filter .25s ease-in-out;
+
+      filter: grayscale(.8);
+    }
+  }
+}
+
+@import "media.scss";

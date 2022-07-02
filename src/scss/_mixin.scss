@@ -1,0 +1,105 @@
+@mixin flex-center-between {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  -webkit-box-align: center;
+  -webkit-box-pack: justify;
+  -ms-flex-align: center;
+  -ms-flex-pack: justify;
+}
+
+// @mixin flex-start-between {
+//   display: -webkit-box;
+//   display: -ms-flexbox;
+//   display: flex;
+//   align-items: flex-start;
+//   justify-content: space-between;
+
+//   -webkit-box-align: start;
+//   -webkit-box-pack: justify;
+//   -ms-flex-align: start;
+//   -ms-flex-pack: justify;
+// }
+
+// @mixin flex-stretch-between {
+//   display: -webkit-box;
+//   display: -ms-flexbox;
+//   display: flex;
+//   align-items: stretch;
+//   justify-content: space-between;
+
+//   -webkit-box-align: stretch;
+//   -webkit-box-pack: justify;
+//   -ms-flex-align: stretch;
+//   -ms-flex-pack: justify;
+// }
+
+// @mixin flex-center-center {
+//   display: -webkit-box;
+//   display: -ms-flexbox;
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+
+//   -webkit-box-align: center;
+//   -webkit-box-pack: center;
+//   -ms-flex-align: center;
+//   -ms-flex-pack: center;
+// }
+
+// @mixin flex-stretch-start {
+//   display: -webkit-box;
+//   display: -ms-flexbox;
+//   display: flex;
+//   align-items: stretch;
+//   justify-content: flex-start;
+
+//   -webkit-box-align: stretch;
+//   -webkit-box-pack: start;
+//   -ms-flex-align: stretch;
+//   -ms-flex-pack: start;
+// }
+
+@mixin before {
+  content: "";
+  display: inline-block;
+  position: absolute;
+}
+
+@mixin relative {
+  position: relative;
+  top: 0;
+  top: 0;
+  right: 0;
+  left: 0;
+}
+
+@mixin list-none {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+@mixin magentaBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid $magenta;
+  font-size: 14px;
+  font-family: $regular;
+  line-height: 21px;
+  color: $white;
+  background-color: $magenta;
+  border-radius: 5px;
+  transition: color .3s ease-in-out, background-color .3s ease-in-out;
+
+  &:hover , &:focus {
+    color: $magenta;
+    background-color: transparent;
+    transition: color .3s ease-in-out, background-color .3s ease-in-out;
+  }
+}
+

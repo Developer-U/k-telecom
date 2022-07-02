@@ -1,0 +1,195 @@
+@import "_variables.scss";
+@import "_mixin.scss";
+
+html {
+          box-sizing: border-box;
+
+  -webkit-box-sizing: border-box;
+}
+
+body {
+  min-width: 310px;
+  margin: 0;
+  padding: 0;
+  font-size: 13px;
+  font-family: $opensans;
+  line-height: 20px;
+  letter-spacing: .3px;
+  color: $black;
+  background-color: $white;
+}
+
+.closed {
+  overflow-y: hidden;
+  height: 100vh;
+  padding-right: 15px;
+}
+
+* , *::after , *::before {
+          box-sizing: inherit;
+
+  -webkit-box-sizing: inherit;
+}
+
+button {
+  padding: 0;
+  border: none;
+  font-family: inherit;
+  background-color: initial;
+  outline: none;
+  cursor: pointer;
+}
+
+p , h1 , h2 , h3 {
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  font-size: 30px;
+  font-family: $bold;
+  line-height: 45px;
+  letter-spacing: .6px;
+  color: $black;
+}
+
+h2 {
+  font-size: 28px;
+  font-family: $medium;
+  line-height: 42px;
+  color: $black;
+}
+
+h3 {
+  font-size: 20px;
+  font-family: $medium;
+  line-height: 30px;
+  color: $black;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+p {
+  font-size: 13px;
+  font-family: $opensans;
+  line-height: 20px;
+  letter-spacing: .3px;
+  color: $black;
+}
+
+a {
+  text-decoration: none;
+  color: initial;
+}
+
+button:focus , button:active , a:focus , a:active {
+  outline: 1px solid $grey;
+  outline-offset: 3px;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+}
+
+.container {
+  width: 957px;
+  margin: $centered;
+}
+
+
+/*Чекбоксы*/
+
+.card__check {
+  display: block;
+  position: relative;
+  width: 60%;
+  margin-bottom: 19px;
+  padding-left: 30px;
+  font-size: 14px;
+  line-height: 21px;
+  color: $black;
+          transition: color .3s ease-in;
+  cursor: pointer;
+
+  -webkit-transition: color .3s ease-in;
+       -o-transition: color .3s ease-in;
+}
+
+.checkbox {
+  position: absolute;
+  z-index: 20;
+  top: -2px;
+  bottom: 0;
+  left: -8px;
+  width: 23px;
+  height: 23px;
+  opacity: 0;
+}
+
+.card__check span {
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  left: -4px;
+  width: 23px;
+  height: 23px;
+  border: 1px solid rgba(45, 45, 45, .2);
+  border-radius: 2px;
+          transition: border-color .3s ease-in;
+
+  -webkit-transition: border-color .3s ease-in;
+       -o-transition: border-color .3s ease-in;
+}
+
+.card__check span::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border: 1px solid $blue;
+  opacity: 0;
+  background: $blue url("../images/galka.svg") no-repeat center/9px auto;
+  border-radius: 2px;
+          transition: opacity .4s ease-in-out;
+
+  -webkit-transition: opacity .4s ease-in-out;
+       -o-transition: opacity .4s ease-in-out;
+}
+
+.checkbox:checked + span::before {
+  opacity: 1;
+          transition: opacity .4s ease-in-out;
+
+  -webkit-transition: opacity .4s ease-in-out;
+       -o-transition: opacity .4s ease-in-out;
+}
+
+.card__check:hover , .card__check:focus , .card__check:active {
+  color: $blue;
+          transition: color .3s ease-in;
+
+  -webkit-transition: color .3s ease-in;
+       -o-transition: color .3s ease-in;
+}
+
+.owl-theme .owl-nav {
+  display: none;
+}
+
+.owl-carousel {
+  z-index: 0;
+}
+
+.burger:focus , .burger:active , .burger.open:focus , .burger.open:active {
+  outline: none;
+}
+
+

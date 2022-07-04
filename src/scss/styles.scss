@@ -84,8 +84,8 @@
 
   &__contain {
     min-height: 450px;
-    padding: 164px 0 89px 0;
-    background: $banner url("../images/main_pic.png") no-repeat top 146px right 53px/436px auto;
+    padding: 132px 0 89px 0;
+    background: $banner url("../images/main_pic.png") no-repeat top 111px right 53px/436px auto;
   }
 }
 
@@ -109,6 +109,7 @@
   &__btn {
     width: 203px;
     min-height: 45px;
+    cursor: pointer;
 
 @include magentaBtn();
   }
@@ -206,14 +207,133 @@
 
   &__contain {
     width: 94%;
-    padding: 50px 50px 86px;
+    padding: 50px 50px 51px;
     background-color: $banner;
     border-radius: 20px;
   }
 
   &__heading {
-    margin-bottom: 20px;
+    @include hidden();
   }
+
+  &__subheading {
+    margin-bottom: 28px;
+  }
+
+  &__input {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-height: 45px;
+    padding: 15px 25px;
+    border: none;
+    font-size: 12px;
+    color: lighten($black, 60%);
+    background-color: $white;
+  }
+
+  &__btn {
+    width: 100%;
+  }
+}
+
+.cta__form p:nth-child(2) {
+  width: 100%;
+}
+
+.cta__form p:nth-child(3) {
+  width: 22%;
+} 
+
+.cta__form p:nth-child(4) {
+  width: 46%;
+} 
+
+.cta__form p:nth-child(5) {
+  width: 25.3%;
+  cursor: pointer;
+} 
+
+.input__text {
+  display: inline-block;
+  width: 80%;
+  font-size: 14px;
+  line-height: 18px;
+}
+
+.agree {
+  position: relative;
+  top: -36px;
+  right: -44px;
+  width: 49%;
+  font-size: 14px;
+}
+
+.input__link {
+  text-decoration: underline;
+}
+
+.cta__form form {
+  flex-flow: row wrap;
+
+@include flex-start-between();
+}
+
+.cta__form label {
+  @include relative();
+}
+
+.variant input[type="checkbox"] {
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+}
+
+.cta__form input[name="acceptance-718"] {
+  position: relative;
+  top: -10px;
+  left: -613px;
+  width: 22px;
+  height: 22px;
+  border: 1px solid #2d2d2d;
+  border-radius: 4px;
+}
+
+.cta__form label input[type="checkbox"]::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+
+.variant {
+  flex-flow: row wrap;
+  width: 77%;
+  margin-bottom: 26px;
+
+@include flex-start-between();
+}
+
+.variant .wpcf7-list-item {
+  margin: 0;
+}
+
+.variant .wpcf7-list-item-label {
+  padding: 7px 20px;
+  border: 1px solid lighten($black, 70%);
+  border-radius: 10px;
+  transition: color .3s ease-in-out, border-color .3s ease-in-out;
+}
+
+.cta__form input[type="checkbox"]:checked + span {
+  border-color: $blue;
+  color: $blue;
+  transition: color .3s ease-in-out, border-color .3s ease-in-out;
 }
 
 
@@ -252,10 +372,6 @@
   }
 }
 
-.cta__form {
-  height: 142px;
-  background-color: grey;
-}
 
 .social {
   width: 129px;

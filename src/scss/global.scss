@@ -188,6 +188,10 @@ img {
   z-index: 0;
 }
 
+.owl-theme .owl-nav.disabled + .owl-dots {
+  margin-top: -2px;
+}
+
 .burger:focus , .burger:active , .burger.open:focus , .burger.open:active {
   outline: none;
 }

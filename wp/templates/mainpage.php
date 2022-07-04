@@ -44,7 +44,7 @@ get_header();
                         </p>
     
                         <label class="card__check" for="check">
-                            <input type="checkbox" name="checkbox"  class="checkbox">                           
+                            <input id="check" type="checkbox" name="checkbox"  class="checkbox">                           
                                 ТВ&nbsp;+&nbsp;100&nbsp;₽(пакет&nbsp;“Базовый”)                             
                             <span></span>
                         </label>
@@ -73,8 +73,8 @@ get_header();
                             любимые фильмы и&nbsp;сериалы!
                         </p>
     
-                        <label class="card__check" for="check">
-                            <input type="checkbox" name="checkbox"  class="checkbox">                           
+                        <label class="card__check" for="check2">
+                            <input id="check2" type="checkbox" name="checkbox"  class="checkbox">                           
                                 ТВ&nbsp;+&nbsp;100&nbsp;₽(пакет&nbsp;“Базовый”)                             
                             <span></span>
                         </label>
@@ -103,8 +103,8 @@ get_header();
                             и&nbsp;работе с&nbsp;файлами различных размеров.
                         </p>
     
-                        <label class="card__check" for="check">
-                            <input type="checkbox" name="checkbox" class="checkbox">                           
+                        <label class="card__check" for="check3">
+                            <input id="check3" type="checkbox" name="checkbox" class="checkbox">                           
                                 ТВ&nbsp;+&nbsp;100&nbsp;₽(пакет&nbsp;“Базовый”)                             
                             <span></span>
                         </label>
@@ -133,8 +133,8 @@ get_header();
                             и&nbsp;работе с&nbsp;файлами различных размеров.
                         </p>
     
-                        <label class="card__check" for="check">
-                            <input type="checkbox" name="checkbox"  class="checkbox">                           
+                        <label class="card__check" for="check4">
+                            <input id="check4" type="checkbox" name="checkbox"  class="checkbox">                           
                                 ТВ&nbsp;+&nbsp;100&nbsp;₽(пакет&nbsp;“Базовый”)                             
                             <span></span>
                         </label>
@@ -154,9 +154,10 @@ get_header();
     </section>
 
     <section class="cta">
+        <h2 class="cta__heading">Форма обратной связи</h2>
         <div class="container cta__box">
             <article class="cta__contain">
-                <h2 class="cta__heading">
+                <h2 class="cta__subheading">
                     Подключиться просто!
                 </h2>
     

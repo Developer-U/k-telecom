@@ -26,6 +26,7 @@ window.addEventListener('DOMContentLoaded', function(){
     }, timeout);
     };
 
+  // Замена текста на кнопке при клике
   const btn = this.document.querySelectorAll('.card__btn');
     btn.forEach(function(eachBtn){
       eachBtn.addEventListener('click', function(){
@@ -33,6 +34,8 @@ window.addEventListener('DOMContentLoaded', function(){
         this.innerHTML = 'Тариф выбран';
       });
     });
+
+
 
     // Бургерное меню
 
@@ -44,7 +47,8 @@ window.addEventListener('DOMContentLoaded', function(){
    burger.addEventListener('click', function(){      
      if(!flag) {
        fadeIn(menu, 300, 'flex');
-       flag = true;          
+       flag = true;
+      //  Создадим запрет прокрутки окна при открытом меню          
        document.querySelector('body').classList.add('closed');
 
      } else {
@@ -56,7 +60,6 @@ window.addEventListener('DOMContentLoaded', function(){
      burger.classList.toggle('open');
 
      // Скрытие меню при нажатии на один из пунктов меню
-
      document.querySelectorAll('.menu__link').forEach(function(oneItem){
          oneItem.addEventListener('click', function(){          
 
@@ -87,13 +90,15 @@ if(availableScreenWidth <= '992') {
     oneTab.innerHTML='Выбрать';
   });
 } else {
+  document.querySelectorAll('.card__btn').forEach(function(oneTab){
     oneTab.innerHTML='Выбрать тариф';
+  });
 }
+
   
 });
 
-
-
+// Так как слайдер owl-carusel работает на jQuery, подтянем jQuery
 $(document).ready(function(){
   $('.owl-carousel').owlCarousel({
     loop:true,
